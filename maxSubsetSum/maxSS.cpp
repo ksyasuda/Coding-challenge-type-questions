@@ -28,17 +28,17 @@ int maxSubsetSum(vector<int> arr) {
     vect.resize(arr.size()+1);
     vect[0] = arr[0];
     vect[1] = max(arr[0], arr[1]);
-    int maxnum = 0;
+    //int maxnum = 0;
     for(int i = 2; i <= arr.size(); ++i) {
-        if(i == arr.size()) {
-            vect[i] = maxnum;
-            break;
-        }
+        //if(i == arr.size()) {
+        //    vect[i] = maxnum;
+        //    break;
+        //}
         vect[i] = max(max(arr[i], vect[i-2]+arr[i]), vect[i-1]);
-        maxnum = max(maxnum, arr[i]);
+        //maxnum = max(maxnum, arr[i]);
     }
     for(auto it = vect.begin(); it != vect.end(); ++it) {
-        cout << *it << " ";
+        //cout << *it << " ";
         yannick = max(yannick, *it);
     }
     charles altman
